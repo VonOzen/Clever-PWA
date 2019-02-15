@@ -9,7 +9,7 @@ const Nav = () => {
 
     const listLinks = links.map((link) => {
         return (
-            <li><a href={link.target}>{link.label}</a></li>
+            <li key={link.label}><a href={link.target}>{link.label}</a></li>
         );
     });
 
