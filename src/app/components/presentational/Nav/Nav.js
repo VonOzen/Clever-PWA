@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nav = () => {
+export const Nav = () => {
 
     const links = [
         { 'label': 'Home', 'target': '#'},
@@ -21,5 +21,3 @@ const Nav = () => {
         </nav>
     );
 }
-
-export default Nav;
