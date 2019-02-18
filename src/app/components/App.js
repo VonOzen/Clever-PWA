@@ -1,3 +1,15 @@
+
+import React, { Component } from 'react';
+import './app.scss';
+import Header from './presentational/Header/Header';
+
+class App extends Component {
+	render () {
+		return (
+			<Header></Header>
+		);
+	}
+
 import React, { Component, Fragment } from 'react';
 import './app.scss';
 import Main from './presentational/Main/Main';
