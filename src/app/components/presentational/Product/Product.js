@@ -10,8 +10,10 @@ class Product extends Component {
     return (
       <div className="Product">
         <img src="http://placehold.it/324x200" alt={this.props.name + 'image'} />
-        <h3>{this.props.name}</h3>
-        <p>{this.props.price + '€'}</p>
+        <div>
+          <h3>{this.props.name}</h3>
+          <p>{this.props.price + '€'}</p>
+        </div>
       </div>
     );
   }

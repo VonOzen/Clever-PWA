@@ -2,11 +2,15 @@
     background-color: rgb(238, 238, 238);
     border: solid 1px rgb(0, 0, 0);
     flex-basis: 20%;
-    margin-bottom: 8px;
-    padding: 8px;
+    margin-bottom: .75rem;
+    padding: .75rem;
 
     img {
         display: block;
         width: 100%;
+    }
+
+    div {
+        margin-top: .75rem;
     }
 }
