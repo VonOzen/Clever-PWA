@@ -1,0 +1,79 @@
+//Variables
+
+//1. Colors
+//2. Fonts
+//3. Headers & text
+
+//1. Colors
+  //1.1 Main (Blue)
+
+$main500: #0A8CF1;
+$main100: lighten($main500, 20%);
+$main200: lighten($main500, 40%);
+$main300: lighten($main500, 60%);
+$main400: lighten($main500, 80%);
+$main600: darken($main500, 20%);
+$main700: darken($main500, 40%);
+$main800: darken($main500, 60%);
+$main900: darken($main500, 80%);
+
+  //1.2 Accent (Orange)
+
+$accent500: #F16F0A;
+$accent100: lighten($accent500, 20%);
+$accent200: lighten($accent500, 40%);
+$accent300: lighten($accent500, 60%);
+$accent400: lighten($accent500, 80%);
+$accent600: darken($accent500, 20%);
+$accent700: darken($accent500, 40%);
+$accent800: darken($accent500, 60%);
+$accent900: darken($accent500, 80%);
+
+  //1.3 Grey
+
+$grey900: #202832;
+$grey100: lighten($grey900, 90%);
+$grey200: lighten($grey900, 80%);
+$grey300: lighten($grey900, 70%);
+$grey400: lighten($grey900, 60%);
+$grey500: lighten($grey900, 50%);
+$grey600: lighten($grey900, 40%);
+$grey700: lighten($grey900, 30%);
+$grey800: lighten($grey900, 20%);
+
+
+//2. Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,700');
+
+$headFont: Montserrat, sans-serif;
+$textFont: Open-Sans, sans-serif;
+
+
+//3. Headers & text
+
+body {
+  font-family: $textFont;
+  font-style: 0.8rem;
+  color: $grey700;
+}
+
+h1, h2, h3 {
+  font-family: $headFont;
+}
+
+.titles {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $grey900;
+}
+
+.closed-caption {
+  font-size: 1rem;
+  color: $grey500;
+}
+
+.link {
+  color: $accent500;
+  text-decoration: underline;
+}

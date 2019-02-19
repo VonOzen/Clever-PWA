@@ -10,7 +10,11 @@ const Nav = () => {
   ];
 
   const linksList = links.map((link) => {
+<<<<<<< HEAD
     return <li key={link.label}><a href="{link.target}">{link.label}</a></li>;
+=======
+    return <li key={link.label}><a href={link.target}>{link.label}</a></li>;
+>>>>>>> created styleguide
   });
   return (
     <nav>

@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Header></Header>
+        <Header />
         <Main />
         <Footer />
       </Fragment>
