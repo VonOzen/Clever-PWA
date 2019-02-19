@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 // SCSS
 import 'reset-css/sass/_reset.scss';
+import './app/components/app.scss';
 
 // Components
 import App from './app/components/App';

@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
 	mode: 'development',
@@ -35,11 +36,10 @@ const config = {
 			},
 			{
                 test: /\.scss$/,
-				use: [
-                    process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
-                    'css-loader',
-                    'sass-loader' // compiles Sass to CSS
-                ]
+				use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader!sass-loader',
+                })
             },
             {
                 test: /\.css$/,
@@ -55,10 +55,11 @@ const config = {
 			template: './public/index.html',
 			filename: './index.html'
         }),
-        new MiniCssExtractPlugin({
+        /*new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: '[id].css'
-        })
+        })*/
+        new ExtractTextPlugin('style.css')
 	]
 };
 
