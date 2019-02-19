@@ -1,14 +1,17 @@
 import React from 'react';
-import Wrapper from '../wrapper/Wrapper';
+import Wrapper from '../Wrapper/Wrapper';
+import Nav from '../Nav/Nav';
 import './header.scss';
 
 
 const Header = () => {
   return (
     <header>
-      <Wrapper/>
+      <Wrapper>
+        <Nav />
+      </Wrapper>
     </header>
   );
-}
+};
 
 export default Header;

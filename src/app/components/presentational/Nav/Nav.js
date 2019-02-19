@@ -10,7 +10,7 @@ const Nav = () => {
   ];
 
   const linksList = links.map((link) => {
-    return <li><a href="{link.target}">{link.label}</a></li>;
+    return <li key={link.label}><a href="{link.target}">{link.label}</a></li>;
   });
   return (
     <nav>
@@ -20,6 +20,6 @@ const Nav = () => {
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;

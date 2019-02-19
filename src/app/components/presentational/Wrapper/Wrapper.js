@@ -3,13 +3,12 @@ import Nav from '../Nav/Nav';
 import './wrapper.scss';
 
 
-const Wrapper = () => {
-
+const Wrapper = (props) => {
   return (
     <div className="wrapper">
-      <Nav/>
+      {props.children}
     </div>
   );
-}
+};
 
 export default Wrapper;

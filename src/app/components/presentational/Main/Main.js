@@ -1,10 +1,14 @@
 import React from 'react';
 import './main.scss';
+import ProductsPage from '../../container/ProductsPage/ProductsPage';
+import Wrapper from '../Wrapper/Wrapper';
 
 const Main = () => {
   return (
     <main>
-      <h1>PWA APP</h1>
+      <Wrapper>
+        <ProductsPage />
+      </Wrapper>
     </main>
   );
 };
