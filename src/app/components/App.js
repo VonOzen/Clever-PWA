@@ -10,6 +10,7 @@ import Header from './presentational/Header/Header';
 import Main from './presentational/Main/Main';
 import Footer from './presentational/Footer/Footer';
 import HomePage from './container/HomePage/HomePage';
+import ProductPage from './container/ProductPage/ProductPage';
 import ProductsPage from './container/ProductsPage/ProductsPage';
 
 class App extends Component {
@@ -20,8 +21,9 @@ class App extends Component {
         <Main>
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route path="/products/:sku" exact component={ProductPage} />
             <Route path="/products" component={ProductsPage} />
-            <Redirect to="/" />
+            <Redirect from="*" to="/" />
           </Switch>
         </Main>
         <Footer />
