@@ -6,10 +6,20 @@ import './productpage.scss';
 class ProductPage extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+        product: []
+    };
   }
 
   componentDidMount() {
-    console.log(this.props.match.params);
+    let id = this.props.match.params.id;
+    fetch('http://localhost:3000/products/' + id)
+    .then((resp) => resp.json())
+    .then((data) => {
+         this.setState({product: data});
+         console.log(data)
+         return this.state;
+    })
   }
 
   render() {
@@ -17,10 +27,10 @@ class ProductPage extends Component {
       <article >
         <Gallery />
         <ProductInfo
-          title="TV Phillips 4H UHD 4567ZU 80 pouces"
-          stock="En stock"
-          sku={this.props.match.params.sku}
-          price="499,99"
+          title={this.state.product.text}
+          stock={this.state.product.boolean ? 'En stock' : 'Epuisé'}
+          sku={this.state.product.sku}
+          description={this.state.product.textarea}
         />
       </article>
     );

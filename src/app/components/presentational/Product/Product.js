@@ -12,7 +12,7 @@ class Product extends Component {
       <div className="Product">
         <img src="http://placehold.it/324x200" alt={this.props.name + 'image'} />
         <div>
-          <h3><Link to={`/products/${this.props.sku}`}>{this.props.name}</Link></h3>
+          <h3><Link to={`/products/${this.props.id}`}>{this.props.name}</Link></h3>
           <p>{this.props.price + '€'}</p>
         </div>
       </div>

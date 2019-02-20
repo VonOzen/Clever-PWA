@@ -6,7 +6,8 @@ class ProductsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productsPerPage: [
+        productsPerPage: []
+      /*productsPerPage: [
         { name: 'Nintendo Switch', price: 300, sku: 111 },
         { name: 'Nintendo Wii', price: 150, sku: 112 },
         { name: 'Nintendo Wii U', price: 200, sku: 113 },
@@ -19,16 +20,27 @@ class ProductsPage extends Component {
         { name: 'Nintendo DS', price: 75, sku: 120 },
         { name: 'Nintendo 3DS', price: 95, sku: 121 },
         { name: 'Nintendo 3DSXL', price: 120, sku: 122 },
-      ]
+      ]*/
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/products')
+    .then((resp) => resp.json())
+    .then((data) => {
+        this.setState({productsPerPage: data});
+        console.log(this.state);
+        return this.state;
+    });
   }
 
   listProducts() {
     return this.state.productsPerPage.map((product) => {
-      return <Product name={product.name}
-        price={product.price}
-        key={product.name}
+      return <Product name={product.text}
+        price={product.price_collection[0].fr_FR}
+        key={product.sku}
         sku={product.sku}
+        id={product.id}
       />;
     });
   }

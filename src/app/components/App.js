@@ -21,9 +21,9 @@ class App extends Component {
         <Main>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/products/:sku" exact component={ProductPage} />
+            <Route path="/products/:id" exact component={ProductPage} />
             <Route path="/products" component={ProductsPage} />
-            <Redirect from="*" to="/" />
+            <Redirect from="/*" to="/" />
           </Switch>
         </Main>
         <Footer />

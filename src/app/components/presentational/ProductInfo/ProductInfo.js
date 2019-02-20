@@ -9,8 +9,8 @@ const ProductInfo = (props) => {
       <p>Réf: {props.sku}</p>
       <p className="price">{props.price}€</p>
       <hr align="left"/>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque neque enim eligendi deleniti at expedita iste quo, impedit architecto necessitatibus veritatis, nesciunt eius qui ea voluptas commodi molestiae similique aliquid?</p>
-      
+      <p>{props.description}</p>
+
     </div>
   );
 }

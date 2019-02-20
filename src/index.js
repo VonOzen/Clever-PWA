@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 // SCSS
 import 'reset-css/sass/_reset.scss';
@@ -9,8 +9,8 @@ import 'reset-css/sass/_reset.scss';
 import App from './app/components/App';
 
 ReactDom.render(
-  <BrowserRouter>
+  <HashRouter>
     <App />
-  </BrowserRouter>
+  </HashRouter>
   , document.getElementById('app')
 );

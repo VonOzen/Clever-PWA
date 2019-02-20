@@ -8,23 +8,23 @@ const generateProducts = () => {
     let number = faker.random.number(1000, 2);
     let boolean = number ? true : false;
     let price_collection = [{
-        "fr_FR": faker.commerce.price(50, 1500, 2, '€'),
-        "en_UK": faker.commerce.price(50, 1500, 2, '£'),
-        "en_US": faker.commerce.price(50, 1500, 2, '$'),
-        "es_ES": faker.commerce.price(50, 1500, 2, '€'),
+      "fr_FR": faker.commerce.price(50, 1500, 2, '€'),
+      "en_UK": faker.commerce.price(50, 1500, 2, '£'),
+      "en_US": faker.commerce.price(50, 1500, 2, '$'),
+      "es_ES": faker.commerce.price(50, 1500, 2, '€'),
     }];
     let metric = "undefined";
     let text = faker.commerce.productName();
     let textarea = faker.lorem.paragraph(5);
     let file = "undefined";
     let image = "http://placehold.it/600x400";
-    let date = faker.date.future(1,'02-20-2019');
+    let date = faker.date.future(1, '02-20-2019');
     let simpleselect = "undefined";
     let multiselect = "undefined";
 
     products.push({
       "id": id,
-      "sku":sku,
+      "sku": sku,
       "boolean": boolean,
       "number": number,
       "price_collection": price_collection,
@@ -49,7 +49,7 @@ const generateCategories = () => {
     let nameCategory = faker.commerce.department();
 
     categories.push({
-      "id": i,
+      "id": id,
       "name": nameCategory
     })
   };
@@ -57,7 +57,8 @@ const generateCategories = () => {
   return { "categories": categories };
 }
 
-module.exports = {
-  generateProducts,
-  generateCategories
+const mergeDatas = () => {
+    return {...generateProducts(), ...generateCategories()};
 };
+
+module.exports = mergeDatas;
