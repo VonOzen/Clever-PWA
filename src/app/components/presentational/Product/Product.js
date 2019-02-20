@@ -9,9 +9,11 @@ class Product extends Component {
   render() {
     return (
       <div className="Product">
-        <img src="http://placehold.it/200x200" alt={this.props.name + 'image'} />
-        <h3>{this.props.name}</h3>
-        <p>{this.props.price + '€'}</p>
+        <img src="http://placehold.it/324x200" alt={this.props.name + 'image'} />
+        <div>
+          <h3>{this.props.name}</h3>
+          <p>{this.props.price + '€'}</p>
+        </div>
       </div>
     );
   }

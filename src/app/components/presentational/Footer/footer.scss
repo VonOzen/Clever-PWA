@@ -1,3 +1,7 @@
+@import '../../settings';
+
 footer {
-    background-color: aqua;
+    background-color: $main600;
+    height: auto;
+    padding: .75rem;
 }

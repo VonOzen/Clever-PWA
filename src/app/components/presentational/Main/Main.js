@@ -1,14 +1,12 @@
 import React from 'react';
 import './main.scss';
-//import ProductsPage from '../../container/ProductsPage/ProductsPage';
-import ProductPage from '../../container/ProductPage/ProductPage';
 import Wrapper from '../Wrapper/Wrapper';
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main>
       <Wrapper>
-        <ProductPage />
+        {props.children}
       </Wrapper>
     </main>
   );

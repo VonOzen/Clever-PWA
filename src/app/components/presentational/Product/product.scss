@@ -1,11 +1,16 @@
 .Product {
     background-color: rgb(238, 238, 238);
     border: solid 1px rgb(0, 0, 0);
-
-    margin: 8px;
+    flex-basis: 20%;
+    margin-bottom: .75rem;
+    padding: .75rem;
 
     img {
         display: block;
         width: 100%;
+    }
+
+    div {
+        margin-top: .75rem;
     }
 }
