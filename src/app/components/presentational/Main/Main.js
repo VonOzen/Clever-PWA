@@ -1,6 +1,6 @@
 import React from 'react';
-import Wrapper from '../Wrapper/Wrapper';
 import './main.scss';
+import Wrapper from '../Wrapper/Wrapper';
 
 const Main = (props) => {
   return (

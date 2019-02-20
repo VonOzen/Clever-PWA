@@ -1,0 +1,46 @@
+@import '../../settings.scss';
+
+article {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+* {
+  box-sizing: boder-box;
+}
+
+.zoneImgProduct, .zoneInfosProduct {
+  flex-basis: 47%;
+}
+
+.zoneImgProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 38rem;
+  }
+}
+
+.zoneInfosProduct {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $accent500;
+  }
+
+  hr {
+    width: 70%;
+    height: 2px;
+    border:none;
+    border-bottom: 1px solid $grey300;
+    text-align: left;
+  }
+}
+
