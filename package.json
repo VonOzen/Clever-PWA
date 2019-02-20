@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --fix",
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "mock:api": "json-server --watch api/products.js"
   },
   "author": "POE Clever Garden",
   "license": "ISC",
   "dependencies": {
+    "faker": "^4.1.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
@@ -30,6 +32,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "json-server": "^0.14.2",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
