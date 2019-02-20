@@ -8,7 +8,7 @@
     "lint": "eslint . --fix",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "mock:api": "json-server --watch api/products.js"
+    "mock:api": "json-server --watch api/api.js"
   },
   "author": "POE Clever Garden",
   "license": "ISC",

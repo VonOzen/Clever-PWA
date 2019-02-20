@@ -1,6 +1,6 @@
-let faker = require('faker');
+const faker = require('faker');
 
-let generateProducts = () => {
+const generateProducts = () => {
   let products = [];
 
   for (let id = 1; id <= 30; id++) {
@@ -42,23 +42,22 @@ let generateProducts = () => {
   return { "products": products };
 }
 
-// let generateCategories = () => {
-//   let categories = [];
+const generateCategories = () => {
+  let categories = [];
 
-//   for (let id = 0; id < array.length; id++) {
-//     const element = array[id];
-    
-//   }
-// }
+  for (let id = 0; id < 17; id++) {
+    let nameCategory = faker.commerce.department();
 
-// categories = [{
-//   "id": 1,
-//   "name": "Informatique",
-// },
-// {
-//   "id": 2,
-//   "name": "Informatique",
-// }
-// ];
+    categories.push({
+      "id": i,
+      "name": nameCategory
+    })
+  };
 
-module.exports = generateProducts;
+  return { "categories": categories };
+}
+
+module.exports = {
+  generateProducts,
+  generateCategories
+};
